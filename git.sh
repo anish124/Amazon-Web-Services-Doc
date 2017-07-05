@@ -14,7 +14,7 @@ pushing() {
     read -r branch
     tput setaf 2;echo  Where to? You can say 'origin', 'staging', or 'production';tput sgr0 
     read -r ans
-    if [ "$ans" = "master" ] || [ "$ans" = "staging" ] || [ "$ans" = "production" ]
+    if [ "$ans" = "origin" ] || [ "$ans" = "staging" ] || [ "$ans" = "production" ]
     then
         git push "$ans" "$branch" 
     elif [ "$ans" = "no" ]
